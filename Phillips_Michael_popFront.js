@@ -1,3 +1,11 @@
-// Given an array, remove and return the value at the beginning of the array. Do this without using any built-in array methods except pop().
+function popFront(arr){
+    var front = arr[0];
+    for (var i = 0; i < arr.length - 1; i++)
+    {
+        arr[i] = arr[i+1];
+    }
+    arr.pop();
+    return [arr, front];
+}
 
-// For example, popFront([5, 93, 22, 4]) should return 5 and the original array should result as [93, 22, 4].
+console.log(popFront([5, 93, 22, 4]));
